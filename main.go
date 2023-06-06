@@ -3,10 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/telkomdev/go-stash"
 	"os"
 	"strconv"
 	"time"
+
+	"github.com/telkomdev/go-stash"
 )
 
 var logger *stash.Stash
@@ -40,6 +41,8 @@ func main() {
 				Data: "get me for me index " + strconv.Itoa(i),
 			},
 		}
+
+		fmt.Println("log data: ", logData)
 
 		log(logData)
 		logData = Log{
